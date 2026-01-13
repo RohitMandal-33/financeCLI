@@ -15,12 +15,12 @@ data class Transaction(
     val timestamp: LocalDateTime = LocalDateTime.now()
 ) {
     override fun toString(): String = """
-        |Transaction #$id
-        |Type: $type
-        |Amount: ${amount.setScale(2, RoundingMode.HALF_UP)}
-        |Category: $category
-        |Description: $description
-        |Date: ${timestamp.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"))}
+         Transaction #$id
+         Type: $type
+         Amount: ${amount.setScale(2, RoundingMode.HALF_UP)}
+         Category: $category
+         Description: $description
+         Date: ${timestamp.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"))}
     """.trimMargin()
 }
 

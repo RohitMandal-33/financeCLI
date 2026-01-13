@@ -67,14 +67,14 @@ class PersonalFinanceManager {
         val netCashFlow = allTransactions.netCashFlow()
 
         return """
-            |========== FINANCIAL REPORT ==========
-            |Total Balance: ${totalBalance.toFormattedCurrency()}
-            |Total Income: ${totalIncome.toFormattedCurrency()}
-            |Total Expenses: ${totalExpenses.toFormattedCurrency()}
-            |Net Cash Flow: ${netCashFlow.toFormattedCurrency()}
-            |Number of Accounts: ${accounts.size}
-            |Number of Transactions: ${allTransactions.size}
-            |======================================
+              ========== FINANCIAL REPORT ==========
+              Total Balance: ${totalBalance.toFormattedCurrency()}
+              Total Income: ${totalIncome.toFormattedCurrency()}
+              Total Expenses: ${totalExpenses.toFormattedCurrency()}
+              Net Cash Flow: ${netCashFlow.toFormattedCurrency()}
+              Number of Accounts: ${accounts.size}
+              Number of Transactions: ${allTransactions.size}
+              ======================================
         """.trimMargin()
     }
 }
@@ -117,12 +117,12 @@ class BudgetManager {
     fun getBudgetStatus(category: String): String? {
         return budgets[category]?.let { budget ->
             """
-            |Category: ${budget.category}
-            |Limit: ${budget.limit.toFormattedCurrency()}
-            |Spent: ${budget.getSpent().toFormattedCurrency()}
-            |Remaining: ${budget.getRemaining().toFormattedCurrency()}
-            |Utilization: ${budget.getUtilization()}%
-            |Status: ${if (budget.isOverBudget()) "OVER BUDGET!" else "Within Budget"}
+            Category: ${budget.category}
+            Limit: ${budget.limit.toFormattedCurrency()}
+            Spent: ${budget.getSpent().toFormattedCurrency()}
+            Remaining: ${budget.getRemaining().toFormattedCurrency()}
+            Utilization: ${budget.getUtilization()}%
+            Status: ${if (budget.isOverBudget()) "OVER BUDGET!" else "Within Budget"}
             """.trimMargin()
         }
     }
