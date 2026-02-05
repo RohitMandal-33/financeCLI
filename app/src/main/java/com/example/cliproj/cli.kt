@@ -11,8 +11,7 @@ class FintechCLI {
     fun start() {
         println("""
             ===================================
-            PERSONAL FINANCE MANAGER CLI 
-            Powered by Kotlin Essentials   
+            PERSONAL FINANCE MANAGER CLI   
             ===================================     
             
         """.trimMargin())
